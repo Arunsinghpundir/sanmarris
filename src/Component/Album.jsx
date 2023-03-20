@@ -1,24 +1,25 @@
-import React from 'react'
-import useFetch from '../useFetch';
+import React from "react";
+import useFetch from "../useFetch";
 
-export const Album = ({id}) => {
-    const url = `https://jsonplaceholder.typicode.com/albums?userId=${id}`
-    const {data, loading} = useFetch(url);
-    if(loading){
-        return (
-        <>
+export const Album = ({ id }) => {
+  const url = `https://jsonplaceholder.typicode.com/albums?userId=${id}`;
+  const { data, loading } = useFetch(url);
+  if (loading) {
+    return (
+      <>
         <h2>Loading...</h2>
-        <h3>Please wait while we load data for you😊 </h3>
-        </>
-        )
-      }
+      </>
+    );
+  }
   return (
-    <ol>{data.map(({title,id})=>{
+    <ol>
+      {data.map(({ title, id }) => {
         return (
-        <li key={id}>
-        <p>{title}</p>
-        </li>
-        )
-    })}</ol>
-  )
-}
+          <li key={id}>
+            <p>{title}</p>
+          </li>
+        );
+      })}
+    </ol>
+  );
+};
