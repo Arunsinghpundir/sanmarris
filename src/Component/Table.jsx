@@ -10,21 +10,24 @@ export const Table = ({ Post, Album, Comment, Completed, Pending, Todos }) => {
     return (
       <>
         <h2>Loading...</h2>
-        <h3>Please wait while we load data for you😊 </h3>
       </>
     );
   }
   return (
     <table>
-      <thead>
-        <tr>
-          <th>User ID</th>
-          <th>Company Name</th>
-          <th>Person Name</th>
-          <th>Details</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
+      {loading ? (
+        ""
+      ) : (
+        <thead>
+          <tr>
+            <th>User ID</th>
+            <th>Company Name</th>
+            <th>Person Name</th>
+            <th>Details</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+      )}
       <tbody>
         {data.map(
           ({ id, name, email, company, username, address, phone, website }) => {
@@ -41,14 +44,18 @@ export const Table = ({ Post, Album, Comment, Completed, Pending, Todos }) => {
                   >
                     <li>name: {name}</li>
                     <li>username: {username}</li>
-                    <li>email: <a href={email}>{email}</a></li>
+                    <li>
+                      email: <a href={email}>{email}</a>
+                    </li>
                     <li>suite: {address.suite}</li>
                     <li>city: {address.city}</li>
                     <li>zip code: {address.zipcode}</li>
                     <li>latitute: {address.geo.lat}</li>
                     <li>longitute: {address.geo.lng}</li>
                     <li>phone: {phone}</li>
-                    <li>website: <a href={website}>{website}</a></li>
+                    <li>
+                      website: <a href={website}>{website}</a>
+                    </li>
                     <li>catchPhrase: {company.catchPhrase}</li>
                     <li>bs: {company.bs}</li>
                   </ul>

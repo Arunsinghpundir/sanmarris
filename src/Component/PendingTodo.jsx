@@ -8,7 +8,6 @@ export const PendingTodo = ({ id }) => {
     return (
       <>
         <h2>Loading...</h2>
-        <h3>Please wait while we load data for you😊 </h3>
       </>
     );
   }
