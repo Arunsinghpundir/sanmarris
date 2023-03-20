@@ -1,0 +1,30 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: left;
+}
+ul {
+  padding: 0;
+}
+th {
+  text-align: center;
+}
+tr,
+td,
+table,
+th {
+  border-collapse: collapse;
+  padding: 2px;
+  border: 1px solid;
+}
+ul,
+td {
+  background-color: rgb(230, 234, 236);
+  margin: 15px;
+  padding: 10px;
+}
+.App {
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+}
