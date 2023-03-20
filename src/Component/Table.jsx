@@ -15,19 +15,16 @@ export const Table = ({ Post, Album, Comment, Completed, Pending, Todos }) => {
   }
   return (
     <table>
-      {loading ? (
-        ""
-      ) : (
-        <thead>
-          <tr>
-            <th>User ID</th>
-            <th>Company Name</th>
-            <th>Person Name</th>
-            <th>Details</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-      )}
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Company Name</th>
+          <th>Person Name</th>
+          <th>Details</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
       <tbody>
         {data.map(
           ({ id, name, email, company, username, address, phone, website }) => {
